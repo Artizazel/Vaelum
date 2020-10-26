@@ -22,9 +22,7 @@ public class NoteController : MonoBehaviour
 
     void clickedOn()
     {
-
         scoreController.SendMessage("addScore", perfectHit);
-        
 
     }
 
@@ -33,8 +31,7 @@ public class NoteController : MonoBehaviour
     {
 
         perfectHit = true;
-        Debug.Log("Prefect");
-
+        print("Perfect");
     }
 
     void missNote()

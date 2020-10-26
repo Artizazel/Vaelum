@@ -46,7 +46,7 @@ public class HitDetection : MonoBehaviour
 
 
             }
-            else if (Input.GetKey("e") && Input.GetMouseButtonDown(0) && hit.transform.tag == "n Notes" & !(Input.GetKey("w") || Input.GetKey("q")))
+            else if (Input.GetKey("e") && Input.GetMouseButtonDown(0) && hit.transform.tag == "E notes" & !(Input.GetKey("w") || Input.GetKey("q")))
             {
 
                 hit.transform.gameObject.SendMessage("clickedOn");
