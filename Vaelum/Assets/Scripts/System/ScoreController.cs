@@ -10,6 +10,8 @@ public class ScoreController : MonoBehaviour
 
     public Text comboUI;
 
+    public Text scoreUI;
+
     public Slider healthUI;
 
 
@@ -17,6 +19,7 @@ public class ScoreController : MonoBehaviour
 
     public int health = 100;
 
+    public int score = 0;
 
     void Start()
     {
@@ -26,7 +29,7 @@ public class ScoreController : MonoBehaviour
     void addScore(bool perfectHit)
     {
 
-
+        score = score + (1 * combo);
 
 
         if (health < 100)
@@ -58,12 +61,21 @@ public class ScoreController : MonoBehaviour
         health = health - 10;
 
         updateUI();
+
+        if(health < 1)
+        {
+
+            print("loose");
+
+        }
     }
 
     void updateUI()
     {
 
-        //healthUI.value = health;
+        scoreUI.text = score.ToString();
+
+        healthUI.value = health;
         
         comboUI.text = "x" + combo.ToString();
 
