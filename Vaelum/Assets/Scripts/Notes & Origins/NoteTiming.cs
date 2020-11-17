@@ -18,7 +18,12 @@ public class NoteTiming : MonoBehaviour
 
         note.SendMessage("perfectNote");
 
-        
+    }
+
+    public void perfectIndicator()
+    {
+
+        note.SendMessage("perfectColour");
 
     }
 

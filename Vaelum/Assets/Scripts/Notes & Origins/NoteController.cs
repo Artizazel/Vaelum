@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteController : MonoBehaviour
 {
@@ -12,20 +13,29 @@ public class NoteController : MonoBehaviour
 
     private Renderer noteRenderer;
 
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
         scoreController = GameObject.Find("Score Controller");
         noteRenderer = GetComponent<Renderer>();
+
+     
+        gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
+        
+         
+
     }
 
 
 
     void clickedOn()
     {
-        scoreController.SendMessage("addScore", perfectHit);
 
-        print("hit");
+        scoreController.SendMessage("addScore", perfectHit);
+        ScoreController.noteCount++;
 
         Destroy(gameObject);
 
@@ -37,10 +47,17 @@ public class NoteController : MonoBehaviour
 
         perfectHit = true;
 
-        if(gameObject.tag == "Q notes")
+        
+
+    }
+
+    void perfectColour()
+    {
+
+        if (gameObject.tag == "Q notes")
         {
-            
-            
+
+
             noteRenderer.material.color = Color.red;
         }
         else if (gameObject.tag == "W notes")
@@ -51,11 +68,17 @@ public class NoteController : MonoBehaviour
         {
             noteRenderer.material.color = Color.cyan;
         }
+        else if (gameObject.tag == "S notes")
+        {
+            noteRenderer.material.color = Color.grey;
+        }
+
 
     }
 
     void missNote()
     {
+        ScoreController.noteCount++;
         scoreController.SendMessage("missedNote");
         Destroy(gameObject);
     }

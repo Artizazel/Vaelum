@@ -8,6 +8,7 @@ public class HitDetection : MonoBehaviour
 {
     private Camera cam;
 
+    GameObject[] sNotes;
 
 
     // Start is called before the first frame update
@@ -21,6 +22,17 @@ public class HitDetection : MonoBehaviour
     {
 
         RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            sNotes = GameObject.FindGameObjectsWithTag("S notes");
+
+            sNotes[0].SendMessage("clickedOn");
+        }
+
+
+
 
 
         if (hit.collider != null)
@@ -58,6 +70,14 @@ public class HitDetection : MonoBehaviour
             }
 
         }
+
+
+    }
+
+    void SpaceNoteSpawned()
+    {
+
+
 
 
     }
