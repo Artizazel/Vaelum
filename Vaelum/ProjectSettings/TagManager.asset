@@ -9,6 +9,7 @@ TagManager:
   - Q notes
   - S notes
   - Old
+  - NoteList
   layers:
   - Default
   - TransparentFX

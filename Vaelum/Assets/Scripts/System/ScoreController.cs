@@ -36,13 +36,20 @@ public class ScoreController : MonoBehaviour
 
     public int score = 0;
 
-    
+    public AudioSource perfectHitSound;
+
+    public AudioSource okayHitSound;
+
+    public AudioSource missedHitSound;
+
+    Color32 qC = new Color32(0x6A, 0x2F, 0x39, 0xFF);
+
 
     void Start()
     {
         noteList = GameObject.Find("Note List");
 
-        //noteCount = noteList.transform.childCount;
+
 
         updateUI();
     }
@@ -60,22 +67,28 @@ public class ScoreController : MonoBehaviour
 
         if (perfectHit == false)
         {
+            okayHitSound.Play();
+
             print("OK");
             if(invincible == true)
             {
                 numOfHitNotes++;
-
+                invincible = false;
                 notePercent = ((numOfHitNotes / noteCount) * 100);
+                healthUIFill.color = qC;
             }
-            { invincible = false;
-                healthUIFill.color = Color.red;
-                numOfHitNotes = numOfHitNotes + 0.5f;
+            else if (invincible == false)
+            { 
+                numOfHitNotes = numOfHitNotes + 0.6f;
+                health = health - 5;
             }
+
+            combo = 1;
 
         }
         else
         {
-
+            perfectHitSound.Play();
             numOfHitNotes++;
 
             notePercent = ((numOfHitNotes / noteCount) * 100);
@@ -92,7 +105,7 @@ public class ScoreController : MonoBehaviour
         {
 
             invincible = true;
-            healthUIFill.color = Color.yellow;
+            healthUIFill.color = Color.white;
 
         }
 
@@ -104,13 +117,17 @@ public class ScoreController : MonoBehaviour
     void missedNote()
     {
 
-        if(invincible == true)
+
+        missedHitSound.Play();
+
+        combo = 1;
+        if (invincible == true)
         {
             numOfHitNotes++;
 
             notePercent = ((numOfHitNotes / noteCount) * 100);
             invincible = false;
-            healthUIFill.color = Color.red;
+            healthUIFill.color = qC;
 
         }
         else
@@ -118,11 +135,11 @@ public class ScoreController : MonoBehaviour
 
             notePercent = ((numOfHitNotes / noteCount) * 100);
 
-            combo = 1;
+            
 
             health = health - 10;            
 
-            updateUI();
+            
 
             if (health < 1)
             {
@@ -132,7 +149,9 @@ public class ScoreController : MonoBehaviour
             }
 
         }
-        
+
+        updateUI();
+
     }
 
     void updateUI()
