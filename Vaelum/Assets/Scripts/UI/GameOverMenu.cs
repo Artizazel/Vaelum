@@ -7,26 +7,36 @@ public class GameOverMenu : MonoBehaviour
 {
 
 
+    public GameObject discPiece;
+    public GameObject retryPiece;
+    public GameObject giveUpPiece;
+    public GameObject repairedPiece;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    
 
     public void Retry()
     {
 
-        SceneManager.LoadScene(1);
+        discPiece.active = false;
+        retryPiece.active = false;
+        giveUpPiece.active = false;
+        repairedPiece.active = true;
+
+        Invoke("ReloadScene", 0.1f);
 
     }
 
     public void GiveUP()
     {
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+
+    }
+
+    private void ReloadScene()
+    {
+
+        SceneManager.LoadScene(2);
 
     }
 

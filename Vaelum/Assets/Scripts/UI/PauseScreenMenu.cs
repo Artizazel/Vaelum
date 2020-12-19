@@ -23,11 +23,11 @@ public class PauseScreenMenu : MonoBehaviour
 
     public void Exit()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(5);
     }
 
     public void adjustVolume()

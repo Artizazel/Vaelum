@@ -1,13 +1,21 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ComboPelletHandler
+    - DelayedDestroy
     - DisplayKey
     - GameOverMenu
     - HitDetection
+    - LoadSong
+    - Navigation
     - NoteController
     - NoteListHandler
     - NoteTiming
+    - PauseScreenMenu
+    - PerformanceScreenMenu
+    - Retry
     - ScoreController
+    - SongSelectMenu
     - SpawnNote
     - SplashScreenMenu
     Unity.2D.Animation.Editor.dll:
@@ -32,6 +40,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -53,6 +62,61 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11798}
+    - Class: 114
+      Script: {instanceID: 11800}
+    - Class: 114
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 12186}
+    - Class: 114
+      Script: {instanceID: 12904}
+    - Class: 114
+      Script: {instanceID: 13968}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 15146}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Performance Scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -60,19 +124,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 14510}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 15146}
     - Class: 114
-      Script: {instanceID: 15132}
+      Script: {instanceID: 19476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -104,6 +168,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 60
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -121,31 +189,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11798}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 12486}
+      Script: {instanceID: 12318}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12412}
     - Class: 114
-      Script: {instanceID: 13836}
+      Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 14136}
+      Script: {instanceID: 12684}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 13844}
     - Class: 114
-      Script: {instanceID: 14518}
+      Script: {instanceID: 14090}
     - Class: 114
-      Script: {instanceID: 15132}
+      Script: {instanceID: 14146}
     - Class: 114
-      Script: {instanceID: 15178}
+      Script: {instanceID: 14264}
     - Class: 114
-      Script: {instanceID: 44464}
+      Script: {instanceID: 14344}
+    - Class: 114
+      Script: {instanceID: 14396}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 14532}
+    - Class: 114
+      Script: {instanceID: 15146}
+    - Class: 114
+      Script: {instanceID: 15192}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -155,6 +233,100 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Retry.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11800}
+    - Class: 114
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 12186}
+    - Class: 114
+      Script: {instanceID: 12904}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 15146}
+    - Class: 114
+      Script: {instanceID: 55060}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Song Select.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11798}
+    - Class: 114
+      Script: {instanceID: 11800}
+    - Class: 114
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 12186}
+    - Class: 114
+      Script: {instanceID: 12230}
+    - Class: 114
+      Script: {instanceID: 12474}
+    - Class: 114
+      Script: {instanceID: 12904}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 15070}
+    - Class: 114
+      Script: {instanceID: 15146}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -178,19 +350,19 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 11826}
     - Class: 114
-      Script: {instanceID: 12894}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 13462}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13472}
     - Class: 114
-      Script: {instanceID: 14496}
+      Script: {instanceID: 14510}
     - Class: 114
-      Script: {instanceID: 15132}
+      Script: {instanceID: 15146}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -212,6 +384,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: f087c23fbfa15475a0d110af46fb0496
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -298,6 +476,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadSong
+  - hash:
+      serializedVersion: 2
       Hash: 5f206dd3b0d6b103c9456019be49d644
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -344,6 +528,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 4affe25ae0bf6b4e5a20cd3c134f5358
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Navigation
+  - hash:
+      serializedVersion: 2
+      Hash: 68b3ce7a45e5d40043456f24efcabfee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SongSelectMenu
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -398,6 +594,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: f890d9f67107bc624288fc8fce0c990d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ComboPelletHandler
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -496,12 +698,6 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: f087c23fbfa15475a0d110af46fb0496
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -514,13 +710,13 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: cf012f547b28c9fd93fb1ca1c6284669
+      Hash: e78995000c4b987afb9eb4d804c8771b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NoteController
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ebada35fe98b22f76dd2306d48a8ba60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverMenu
@@ -580,7 +776,13 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 667637bfc556ad2b2c76948b87f7a29f
+      Hash: fd61eaa7a95d7a159ee68c07b6fdfb6c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DelayedDestroy
+  - hash:
+      serializedVersion: 2
+      Hash: 0f16605f34d16dcadb3de30c6fa21d65
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreController
@@ -596,6 +798,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnNote
+  - hash:
+      serializedVersion: 2
+      Hash: 0ed342c18455892f41ddfab0adf9e97e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseScreenMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NoteListHandler
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -736,13 +950,22 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: fd1c6d2e1beabcf2e283da2ee2873534
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PerformanceScreenMenu
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: NoteListHandler
+    className: Retry
   platform: 5
   scenePathNames:
   - Assets/Scenes/Splash Screen.unity
+  - Assets/Scenes/Song Select.unity
   - Assets/Scenes/Play Scene.unity
+  - Assets/Scenes/Performance Scene.unity
   - Assets/Scenes/Game Over.unity
+  - Assets/Scenes/Retry.unity
   playerPath: E:/GitBackup/Vaelum/Build/Vaelum.exe

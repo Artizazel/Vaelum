@@ -26,7 +26,7 @@ public class NoteController : MonoBehaviour
         noteRenderer = GetComponent<Renderer>();
 
      
-        gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
+        //gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
 
 
     }

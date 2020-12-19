@@ -9,6 +9,16 @@ public class ScoreController : MonoBehaviour
 {
 
 
+    public Sprite bronze;
+    public Sprite silver;
+    public Sprite gold;
+    public Sprite plat;
+    public Sprite diamond;
+    public Sprite vae;
+
+    private GameObject updatePelletHUD;
+
+    public Image ratingIndicator;
 
     public Text comboUI;
 
@@ -26,7 +36,7 @@ public class ScoreController : MonoBehaviour
 
     public float numOfHitNotes = 1;
 
-    public float notePercent = 100;
+    public static float notePercent = 100;
 
     bool invincible = false;
 
@@ -34,7 +44,7 @@ public class ScoreController : MonoBehaviour
 
     public int health = 100;
 
-    public int score = 0;
+    public static int score = 0;
 
     public AudioSource perfectHitSound;
 
@@ -47,6 +57,12 @@ public class ScoreController : MonoBehaviour
 
     void Start()
     {
+
+        notePercent = 100;
+        score = 0;
+
+        updatePelletHUD = GameObject.Find("Combo Bar");
+
         noteList = GameObject.Find("Note List");
 
 
@@ -57,7 +73,7 @@ public class ScoreController : MonoBehaviour
     void addScore(bool perfectHit)
     {
 
-        score = score + (1 * combo);
+        score = score + (10 * combo);
 
 
         if (health < 100)
@@ -74,7 +90,7 @@ public class ScoreController : MonoBehaviour
             {
                 numOfHitNotes++;
                 invincible = false;
-                notePercent = ((numOfHitNotes / noteCount) * 100);
+                //notePercent = ((numOfHitNotes / noteCount) * 100);
                 healthUIFill.color = qC;
             }
             else if (invincible == false)
@@ -93,7 +109,7 @@ public class ScoreController : MonoBehaviour
 
             notePercent = ((numOfHitNotes / noteCount) * 100);
 
-            if (combo < 10)
+            if (combo < 11)
             {
                 combo++;
             }
@@ -101,7 +117,7 @@ public class ScoreController : MonoBehaviour
         }
 
 
-        if(combo == 10)
+        if(combo == 11)
         {
 
             invincible = true;
@@ -125,7 +141,7 @@ public class ScoreController : MonoBehaviour
         {
             numOfHitNotes++;
 
-            notePercent = ((numOfHitNotes / noteCount) * 100);
+            //notePercent = ((numOfHitNotes / noteCount) * 100);
             invincible = false;
             healthUIFill.color = qC;
 
@@ -144,7 +160,7 @@ public class ScoreController : MonoBehaviour
             if (health < 1)
             {
 
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(4);
 
             }
 
@@ -157,6 +173,9 @@ public class ScoreController : MonoBehaviour
     void updateUI()
     {
 
+
+        updatePelletHUD.SendMessage("updatePellets", combo);
+
         scoreUI.text = score.ToString();
 
         healthUI.value = health;
@@ -165,12 +184,44 @@ public class ScoreController : MonoBehaviour
 
         if (notePercent > 100)
         {
-            percentageUI.text = "100" + "%";
+            notePercent = 100;
         }
-        else
+
+        updateRating(notePercent);
+
+    }
+
+    void updateRating(float percent)
+    {
+
+
+
+        if (percent >= 100)
         {
-            percentageUI.text = notePercent.ToString() + "%";
+            ratingIndicator.sprite = vae;
         }
+        else if (percent > 95)
+        {
+            ratingIndicator.sprite = diamond;
+        }
+        else if (percent > 90)
+        {
+            ratingIndicator.sprite = plat;
+        }
+        else if (percent > 80)
+        {
+            ratingIndicator.sprite = gold;
+        }
+        else if (percent >= 70)
+        {
+            ratingIndicator.sprite = silver;
+        }
+        else if (percent < 70)
+        {
+            ratingIndicator.sprite = bronze;
+        }
+
+
 
     }
     

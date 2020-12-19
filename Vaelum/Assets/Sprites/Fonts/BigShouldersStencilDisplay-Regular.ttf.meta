@@ -11,10 +11,7 @@ TrueTypeFontImporter:
   fontNames:
   - Big Shoulders Stencil Display
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 502ff0093749f1e43a1b187c15092469, type: 3}
   - {fileID: 12800000, guid: eaedf7892225a5d43ac50f31307545d0, type: 3}
-  - {fileID: 12800000, guid: 1bc3beda86344c442b4b5a47f67f0f8a, type: 3}
-  - {fileID: 12800000, guid: 72a5c97c42f53084b8c3c4dd285ce75a, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

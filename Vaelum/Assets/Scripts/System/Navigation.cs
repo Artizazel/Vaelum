@@ -18,7 +18,6 @@ public class Navigation : MonoBehaviour
         song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
 
         song.volume = PlayerPrefs.GetFloat("volume");
-
     }
 
     // Update is called once per frame

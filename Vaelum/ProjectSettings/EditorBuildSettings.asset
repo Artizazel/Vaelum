@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash Screen.unity
     guid: f82bebeaa349a894798bdeac5f54ca88
   - enabled: 1
+    path: Assets/Scenes/Song Select.unity
+    guid: 262dc63a53f9b094590367f68af236b5
+  - enabled: 1
     path: Assets/Scenes/Play Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Performance Scene.unity
+    guid: 090d658fb0c659e4d9f2ec80246453f7
+  - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: a4b42c24c806c574996d162ca0381f3c
+  - enabled: 1
+    path: Assets/Scenes/Retry.unity
+    guid: 25e4f55642eb998468faef7ee6354982
+  - enabled: 1
+    path: Assets/Scenes/Retry 1.unity
+    guid: 073fe38d57d20444a80b1152660a2bcd
   m_configObjects: {}

@@ -16,6 +16,7 @@ public class NoteListHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
 
         progressBar = GameObject.Find("Progress Bar").GetComponent<Slider>();
 
@@ -25,15 +26,20 @@ public class NoteListHandler : MonoBehaviour
 
         progressBar.maxValue = songLength;
 
+        print(song.name);
+
         Invoke("EndLevel", songLength);
+
+        
 
     }
 
     void EndLevel()
     {
-
-        SceneManager.LoadScene(0);
-
+        print(song.name);
+        PlayerPrefs.SetFloat(song.name + "percent", ScoreController.notePercent);
+        PlayerPrefs.SetFloat(song.name + "score", ScoreController.score);
+        SceneManager.LoadScene(3);
     }
 
     void Update()
