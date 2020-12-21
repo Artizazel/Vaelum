@@ -48,6 +48,7 @@ public class SongSelectMenu : MonoBehaviour
         if(Input.GetKey("[") && Input.GetKey("z"))
         {
             PlayerPrefs.DeleteAll();
+
         }
 
 

@@ -30,7 +30,7 @@ public class NoteListHandler : MonoBehaviour
 
         Invoke("EndLevel", songLength);
 
-        
+        Time.timeScale = 1;
 
     }
 

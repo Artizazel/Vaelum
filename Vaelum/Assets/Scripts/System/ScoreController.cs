@@ -65,6 +65,7 @@ public class ScoreController : MonoBehaviour
 
         noteList = GameObject.Find("Note List");
 
+        
 
 
         updateUI();

@@ -16,7 +16,6 @@ public class PauseScreenMenu : MonoBehaviour
     {
 
         song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
-
         volumeSlider.value = song.volume;
     }
 
