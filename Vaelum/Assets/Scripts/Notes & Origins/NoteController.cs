@@ -19,6 +19,10 @@ public class NoteController : MonoBehaviour
 
     public GameObject missedTimingText;
 
+    GameObject tutorial;
+
+    bool tutorialActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,11 @@ public class NoteController : MonoBehaviour
 
      
         //gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
+
+        if(tutorial = GameObject.Find("Tutorial"))
+        {
+            tutorialActive = true;
+        }
 
 
     }
@@ -37,10 +46,18 @@ public class NoteController : MonoBehaviour
     {
         if(perfectHit == true)
         {
+            if (tutorialActive == true)
+            {
+                tutorial.SendMessage("perfect");
+            }
             Instantiate(perfectTimingText, transform.position, transform.rotation);
         }
         else
         {
+            if (tutorialActive == true)
+            {
+                tutorial.SendMessage("okay");
+            }
             Instantiate(okayTimingText, transform.position, transform.rotation);
         }
 
@@ -56,8 +73,6 @@ public class NoteController : MonoBehaviour
     {
 
         perfectHit = true;
-
-        
 
     }
 
@@ -88,6 +103,12 @@ public class NoteController : MonoBehaviour
 
     void missNote()
     {
+        if(tutorialActive == true)
+        {
+            tutorial.SendMessage("miss");
+        }
+
+
         Instantiate(missedTimingText, transform.position, transform.rotation);
         ScoreController.noteCount++;
         scoreController.SendMessage("missedNote");

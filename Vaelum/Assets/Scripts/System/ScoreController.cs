@@ -60,6 +60,8 @@ public class ScoreController : MonoBehaviour
 
         notePercent = 100;
         score = 0;
+        numOfHitNotes = 1;
+        noteCount = 1;
 
         updatePelletHUD = GameObject.Find("Combo Bar");
 

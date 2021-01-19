@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Navigation : MonoBehaviour
 {
@@ -12,12 +13,22 @@ public class Navigation : MonoBehaviour
 
     AudioSource song;
 
+    public AudioMixer mixer;
+
+    public SpriteRenderer background;
+
     // Start is called before the first frame update
     void Start()
     {
         song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
 
-        song.volume = PlayerPrefs.GetFloat("volume");
+        mixer.SetFloat("Vol", PlayerPrefs.GetFloat("volume"));
+
+        print(SongSelectMenu.song);
+
+        background.sprite = Resources.Load<Sprite>("Album Covers/" + SongSelectMenu.song);
+
+        
     }
 
     // Update is called once per frame

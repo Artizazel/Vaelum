@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class SongSelectMenu : MonoBehaviour
 {
-
+    public static string song;
 
     public Text songName;
     public GameObject playButton;
@@ -21,6 +21,7 @@ public class SongSelectMenu : MonoBehaviour
     int trackPosition = 0;
     public static int rating;
     public Image discImage;
+    public Image discSticker;
 
     public Sprite normalDesc;
     public Sprite vaelocityDesc;
@@ -29,12 +30,14 @@ public class SongSelectMenu : MonoBehaviour
 
     public Sprite[] discRating;
 
+    private AudioSource source;
+
 
     // Start is called before the first frame update
     void Start()
     {
         playButton.GetComponent<Button>().interactable = false;
-
+        source = gameObject.GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -94,14 +97,17 @@ public class SongSelectMenu : MonoBehaviour
 
     public void loadSong(string songNameString)
     {
-
+        song = songNameString;
         songName.text = songNameString;
         disc.SetActive(true);
         discActive = true;
         playButton.GetComponent<Button>().interactable = true;
         discImage.sprite = discRating[rating];
-
-
+        source.clip = Resources.Load<AudioClip>("Songs/" + songNameString);
+        source.time = Random.Range(5, 60);
+        source.Play();
+        discSticker.sprite = Resources.Load<Sprite>("Album Covers/" + songNameString);
+        
     }
 
 

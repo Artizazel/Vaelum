@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: {fileID: 6621806510642875486, guid: 737c8c0e1f326354da06a13c4cd68823, type: 3}
-  spawnTime: 5
-  startUp: 2.25
+  spawnTime: 4
