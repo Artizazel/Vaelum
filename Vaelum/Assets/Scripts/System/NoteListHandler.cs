@@ -31,6 +31,8 @@ public class NoteListHandler : MonoBehaviour
         Invoke("EndLevel", songLength);
 
         Time.timeScale = 1;
+      
+        Invoke("playSong", 2f);
 
     }
 
@@ -42,12 +44,15 @@ public class NoteListHandler : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    void playSong()
+    {
+        song.Play();
+    }
+
     void Update()
     {
 
         progressBar.value = song.time;
-
-
         
 
     }

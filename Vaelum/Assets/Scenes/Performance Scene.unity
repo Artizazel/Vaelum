@@ -406,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca8d0948b0aa2498921501325c20c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  discSticker: {fileID: 1089128307}
   discRating:
   - {fileID: 21300000, guid: a8929e93d6b963b4c8a9f641b399d933, type: 3}
   - {fileID: 21300000, guid: b2463aae29385dc4891f751dd9aa01fb, type: 3}
@@ -1007,7 +1008,7 @@ GameObject:
   - component: {fileID: 1089128308}
   - component: {fileID: 1089128307}
   m_Layer: 5
-  m_Name: Centre
+  m_Name: Sticker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1052,7 +1053,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3f8e9e2678f36e4f9f9a7a562ed34a6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2646805f20b9d124aaaf03597448c712, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

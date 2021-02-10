@@ -27,6 +27,11 @@ public class SongSelectMenu : MonoBehaviour
     public Sprite vaelocityDesc;
     public Sprite mementoDesc;
     public Sprite achromaticDesc;
+    public Sprite descBackgroundOn;
+    public GameObject descList;
+
+    public Image songDesc;
+    public Text[] description;
 
     public Sprite[] discRating;
 
@@ -36,13 +41,25 @@ public class SongSelectMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        PlayerPrefs.SetString("mod", "Normal");
+
+        //PlayerPrefs.SetInt("tutorialPlayed",1);
+
         playButton.GetComponent<Button>().interactable = false;
         source = gameObject.GetComponent<AudioSource>();
+        if(PlayerPrefs.GetInt("tutorialPlayed") == 1)
+        {
+            foreach(Transform child in trackList.transform)
+            {
+                child.GetComponent<Button>().interactable = true;
+            }
+        }
     }
 
     private void FixedUpdate()
     {
-        
+
         if(discActive)
         {
             disc.transform.Rotate(0, 0, -0.5f);
@@ -97,19 +114,55 @@ public class SongSelectMenu : MonoBehaviour
 
     public void loadSong(string songNameString)
     {
+
+
+       
         song = songNameString;
         songName.text = songNameString;
         disc.SetActive(true);
         discActive = true;
         playButton.GetComponent<Button>().interactable = true;
+        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight")
+        {
+            playButton.GetComponent<Button>().interactable = false;
+        }
         discImage.sprite = discRating[rating];
         source.clip = Resources.Load<AudioClip>("Songs/" + songNameString);
         source.time = Random.Range(5, 60);
         source.Play();
         discSticker.sprite = Resources.Load<Sprite>("Album Covers/" + songNameString);
-        
+        fillSongDescription();
+
+
     }
 
+    void fillSongDescription()
+    {
+        songDesc.sprite = descBackgroundOn;
+
+        descList.active = true;
+
+        description[0].text = "Rank - " + PlayerPrefs.GetString(song + "rank");
+        description[1].text = "Percent - " + PlayerPrefs.GetString(song + "percentage");
+        description[2].text = "Score - " + PlayerPrefs.GetString(song + "score");
+        description[3].text = "Mode - " + PlayerPrefs.GetString(song + "songMode");
+
+
+        if(song == "Tutorial")
+        {
+            description[4].text = "♫";
+        }
+        else if(song == "Snap Crackle Bop")
+        {
+            description[4].text = "♫♫";
+        }
+        else if (song == "Moonlight")
+        {
+            description[4].text = "♫♫♫";
+        }
+
+
+    }
 
 
     public void play()
@@ -131,25 +184,25 @@ public class SongSelectMenu : MonoBehaviour
     {
         nob.transform.rotation = Quaternion.Euler(0, 0, -124.793f);
         modifierDesc.sprite = vaelocityDesc;
-        PlayerPrefs.SetInt("mod", 1);
+        PlayerPrefs.SetString("mod", "Vaelocity");
     }
     public void mementoSelected()
     {
         nob.transform.rotation = Quaternion.Euler(0, 0, -180);
         modifierDesc.sprite = mementoDesc;
-        PlayerPrefs.SetInt("mod", 2);
+        PlayerPrefs.SetString("mod", "Memento");
     }
     public void achromaticSelected()
     {
         nob.transform.rotation = Quaternion.Euler(0, 0, -233.526f);
         modifierDesc.sprite = achromaticDesc;
-        PlayerPrefs.SetInt("mod", 3);
+        PlayerPrefs.SetString("mod", "Achromatic");
     }
     public void normalSelected()
     {
         nob.transform.rotation = Quaternion.Euler(0, 0, 0);
         modifierDesc.sprite = normalDesc;
-        PlayerPrefs.SetInt("mod", 0);
+        PlayerPrefs.SetString("mod", "Normal");
     }
 
 
