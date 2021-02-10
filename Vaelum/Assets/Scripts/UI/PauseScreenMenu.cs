@@ -19,7 +19,6 @@ public class PauseScreenMenu : MonoBehaviour
 
     private void Start()
     {
-
         song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
         mixer.SetFloat("Vol", PlayerPrefs.GetFloat("volume"));
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
@@ -28,8 +27,6 @@ public class PauseScreenMenu : MonoBehaviour
 
     public void Exit()
     {
-        Time.timeScale = 1;
-
         SceneManager.LoadScene(1);
     }
     public void Retry()

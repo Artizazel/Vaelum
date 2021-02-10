@@ -29,13 +29,10 @@ public class NoteController : MonoBehaviour
         scoreController = GameObject.Find("Score Controller");
         noteRenderer = GetComponent<Renderer>();
 
-
-        transform.Translate(0, 0, (SpawnNote.currentAmountOfNotes));
-
-
+     
         //gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
 
-        if (tutorial = GameObject.Find("Tutorial(Clone)"))
+        if(tutorial = GameObject.Find("Tutorial"))
         {
             tutorialActive = true;
         }

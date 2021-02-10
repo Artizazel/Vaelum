@@ -197,7 +197,7 @@ public class TutorialController : MonoBehaviour
         }
         else if (tutorialPos == 11)
         {
-            GameObject.Find("hFill").GetComponent<Image>().color = Color.white;
+            GameObject.Find("Fill").GetComponent<Image>().color = Color.white;
             prompt.text = "Your combo maxes out at 10\nIf you get 10 combo your health will turn white\nAllowing you to miss or early hit without affecting health or rating";
             tutorialPos++;
             Invoke("part", 12f);
@@ -206,7 +206,7 @@ public class TutorialController : MonoBehaviour
         {
             arrow[2].SetActive(false);
             arrow[3].SetActive(true);
-            GameObject.Find("hFill").GetComponent<Image>().color = new Color32(0x6A, 0x2F, 0x39, 0xFF);
+            GameObject.Find("Fill").GetComponent<Image>().color = new Color32(0x6A, 0x2F, 0x39, 0xFF);
             prompt.text = "Up here is your progress bar";
             tutorialPos++;
             Invoke("part", 3f);
@@ -224,7 +224,7 @@ public class TutorialController : MonoBehaviour
         {
             arrow[3].SetActive(false);
             arrow[4].SetActive(true);
-            prompt.text = "And this is your song rating\nYou'll have to figure this one out for yourself";
+            prompt.text = "And this is your song rating\nYou can figure this one out for yourself";
             tutorialPos++;
             Invoke("part", 7f);
 
@@ -241,20 +241,18 @@ public class TutorialController : MonoBehaviour
         {
             prompt.text = "";
             Instantiate(songController);
-            GameObject.Find("Navigation / Initialisation").SendMessage("setSong");
             tutorialPos++;
-            Invoke("endTutorial", 50f);
+            Invoke("part", 50f);
+        }
+        else if (tutorialPos == 17)
+        {
+            prompt.text = "Well done! All songs are now unlocked";
+            tutorialPos++;
         }
 
     }
 
-    void endTutorial()
-    {
-        prompt.text = "Well done! All songs are now unlocked";
-        PlayerPrefs.SetInt("tutorialPlayed",1);
-    }
-
-
+    
     void perfect()
     {
         perfectHit = true;
