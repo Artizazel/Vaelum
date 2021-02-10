@@ -11,7 +11,7 @@ public class SpawnNote : MonoBehaviour
 
     public float spawnTime;
 
-    float startUp = 1.55f;
+    float startUp = 1.58f;
 
 
     // Start is called before the first frame update
@@ -23,16 +23,16 @@ public class SpawnNote : MonoBehaviour
 
     IEnumerator countdown()
     {
-        yield return new WaitForSeconds(spawnTime - startUp);
+        yield return new WaitForSeconds((spawnTime + 2) - startUp);
 
-        if(currentAmountOfNotes >= 9)
-        {
-            currentAmountOfNotes = 1;
-        }
-        else
-        {
+        //if(currentAmountOfNotes >= 9)
+        //{
+        //    currentAmountOfNotes = 1;
+        //}
+        //else
+        //{
             currentAmountOfNotes++;
-        }
+        //}
         
 
 

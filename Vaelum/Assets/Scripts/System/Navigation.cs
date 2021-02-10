@@ -20,7 +20,10 @@ public class Navigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
+
+        Instantiate(Resources.Load("Lists/" + SongSelectMenu.song));
+
+        setSong();
 
         mixer.SetFloat("Vol", PlayerPrefs.GetFloat("volume"));
 
@@ -29,6 +32,11 @@ public class Navigation : MonoBehaviour
         background.sprite = Resources.Load<Sprite>("Album Covers/" + SongSelectMenu.song);
 
         
+    }
+
+    public void setSong()
+    {
+        song = GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -66,8 +74,10 @@ public class Navigation : MonoBehaviour
 
             pauseScreen.active = true;
 
-            song.Pause();
-
+            if (song != null)
+            {
+                song.Pause();
+            }
         }
         else
         {
@@ -78,7 +88,11 @@ public class Navigation : MonoBehaviour
 
             pauseScreen.active = false;
 
-            song.Play();
+            if(song != null)
+            {
+                song.Play();
+            }
+            
         }
 
     }

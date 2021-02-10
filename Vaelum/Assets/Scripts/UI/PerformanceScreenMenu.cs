@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PerformanceScreenMenu : MonoBehaviour
 {
 
-
+    public Image discSticker;
     public Sprite[] discRating;
     public Text ratingText;
     public Text percentageText;
@@ -38,18 +38,25 @@ public class PerformanceScreenMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        
+
         song = PlayerPrefs.GetString("currentSong");
 
         songNameText.text = song;
 
+        discSticker.sprite = Resources.Load<Sprite>("Album Covers/" + song);
+
         percent = ScoreController.notePercent;
 
+        gamemodeText.text = PlayerPrefs.GetString("mod");
 
         percentageText.text = percent.ToString() + "%";
 
         scoreText.text = ScoreController.score.ToString();
 
         PlayerPrefs.SetFloat(song + "rating", percent);
+
 
         if (percent == 100)
         {
@@ -81,6 +88,12 @@ public class PerformanceScreenMenu : MonoBehaviour
             ratingIndicator.sprite = discRating[0];
             ratingText.text = "Bronze";
         }
+
+
+        PlayerPrefs.SetString(song + "percentage", percent.ToString());
+        PlayerPrefs.SetString(song + "rank", ratingText.text);
+        PlayerPrefs.SetString(song + "score", scoreText.text);
+        PlayerPrefs.SetString(song + "songMode", gamemodeText.text);
 
     }
 
