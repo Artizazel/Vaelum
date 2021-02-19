@@ -13,10 +13,17 @@ public class NoteListHandler : MonoBehaviour
 
     float songLength;
 
+    public static List<Vector3> notes;
+
+    public static List<int> noteObjects;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        notes = new List<Vector3>();
+
+        noteObjects = new List<int>();
 
         progressBar = GameObject.Find("Progress Bar").GetComponent<Slider>();
 

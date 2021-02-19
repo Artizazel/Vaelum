@@ -15,6 +15,7 @@ public class PerformanceScreenMenu : MonoBehaviour
     public Text gamemodeText;
     public Text songNameText;
     public Image ratingIndicator;
+    public GameObject newHighscore;
     string song;
     float percent;
 
@@ -47,16 +48,13 @@ public class PerformanceScreenMenu : MonoBehaviour
 
         discSticker.sprite = Resources.Load<Sprite>("Album Covers/" + song);
 
-        percent = ScoreController.notePercent;
+        percent = float.Parse(ScoreController.notePercent.ToString("#.##"));
 
         gamemodeText.text = PlayerPrefs.GetString("mod");
 
         percentageText.text = percent.ToString() + "%";
 
         scoreText.text = ScoreController.score.ToString();
-
-        PlayerPrefs.SetFloat(song + "rating", percent);
-
 
         if (percent == 100)
         {
@@ -90,11 +88,18 @@ public class PerformanceScreenMenu : MonoBehaviour
         }
 
 
-        PlayerPrefs.SetString(song + "percentage", percent.ToString());
-        PlayerPrefs.SetString(song + "rank", ratingText.text);
-        PlayerPrefs.SetString(song + "score", scoreText.text);
-        PlayerPrefs.SetString(song + "songMode", gamemodeText.text);
+        if (int.Parse(scoreText.text) > int.Parse(PlayerPrefs.GetString(song + "score")))
+        {
 
+            Instantiate(newHighscore, transform);
+
+            PlayerPrefs.SetFloat(song + "rating", percent);
+            PlayerPrefs.SetString(song + "percentage", percent.ToString());
+            PlayerPrefs.SetString(song + "rank", ratingText.text);
+            PlayerPrefs.SetString(song + "score", scoreText.text);
+            PlayerPrefs.SetString(song + "songMode", gamemodeText.text);
+
+        }
     }
 
     // Update is called once per frame

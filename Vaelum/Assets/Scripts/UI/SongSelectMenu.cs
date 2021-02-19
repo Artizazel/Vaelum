@@ -29,6 +29,7 @@ public class SongSelectMenu : MonoBehaviour
     public Sprite achromaticDesc;
     public Sprite descBackgroundOn;
     public GameObject descList;
+    private GameObject skipButton;
 
     public Image songDesc;
     public Text[] description;
@@ -44,12 +45,14 @@ public class SongSelectMenu : MonoBehaviour
 
         PlayerPrefs.SetString("mod", "Normal");
 
+
         //PlayerPrefs.SetInt("tutorialPlayed",1);
 
         playButton.GetComponent<Button>().interactable = false;
         source = gameObject.GetComponent<AudioSource>();
         if(PlayerPrefs.GetInt("tutorialPlayed") == 1)
         {
+            GameObject.Find("Skip Tutorial").SetActive(false);
             foreach(Transform child in trackList.transform)
             {
                 child.GetComponent<Button>().interactable = true;
@@ -71,8 +74,13 @@ public class SongSelectMenu : MonoBehaviour
 
         }
 
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
-        if(rightHeld)
+
+        if (rightHeld)
         {
             print(trackList.transform.childCount);
             if(trackPosition < (trackList.transform.childCount-6) * 250)
@@ -109,6 +117,12 @@ public class SongSelectMenu : MonoBehaviour
     {
         rightHeld = false;
         leftHeld = false;
+    }
+
+    public void skipTutorial()
+    {
+        PlayerPrefs.SetInt("tutorialPlayed",1);
+        SceneManager.LoadScene(1);
     }
 
 

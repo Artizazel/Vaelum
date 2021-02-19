@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: be4879fefe73c31438b65450f636b5d7, type: 3}
   m_Color: {r: 1, g: 1, b: 0.3726415, a: 0.62352943}
   m_FlipX: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 464729701354726650}
   - component: {fileID: 464729701354726649}
   - component: {fileID: 464729701354726651}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: S note
   m_TagString: S notes
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: be4879fefe73c31438b65450f636b5d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -229,10 +229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0867c6930e48694d85b26da1e427c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glow: {fileID: 7566934064314576183, guid: 5d9e21ce0c45f0449bf78c2dd8b5f6e1, type: 3}
   scoreController: {fileID: 0}
   okayTimingText: {fileID: 8484864275571335507, guid: 7d63c2875af8fea43bf169b9ebb5c993, type: 3}
   perfectTimingText: {fileID: 8484864275571335507, guid: 3fe65376d1693294b9f14cec71a73ef2, type: 3}
+  lateTimingText: {fileID: 8484864275571335507, guid: 63d6f7bd27f9d064b87d12d2d49826ad, type: 3}
   missedTimingText: {fileID: 8484864275571335507, guid: 8f13c4158deb36542ada370096552a8c, type: 3}
+  line: {fileID: 8067027053888439002, guid: f4ff899fcea56cc4798a1aa2d4ce46e3, type: 3}
+  noteNumber: 0
 --- !u!1 &1474370271496569833
 GameObject:
   m_ObjectHideFlags: 0

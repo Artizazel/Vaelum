@@ -17,6 +17,7 @@ public class TutorialController : MonoBehaviour
     int tutorialPos = 1;
 
     bool perfectHit = false;
+    bool lateHit = false;
     bool okayHit = false;
     bool missHit = false;
     bool noteClicked = false;
@@ -59,9 +60,15 @@ public class TutorialController : MonoBehaviour
                 okayHit = false;
                 Instantiate(Wnote);
             }
+            else if (lateHit == true)
+            {
+                prompt.text = "So close, but you hit the note a little bit late\nTry again";
+                lateHit = false;
+                Instantiate(Wnote);
+            }
             else if (missHit == true)
             {
-                prompt.text = "You missed the note\nTry again";
+                prompt.text = "You missed the note\nTry again\nHold down 'W' and click on the blue note";
                 missHit = false;
                 Instantiate(Wnote);
             }
@@ -87,9 +94,15 @@ public class TutorialController : MonoBehaviour
                 okayHit = false;
                 Instantiate(Enote);
             }
+            else if (lateHit == true)
+            {
+                prompt.text = "So close, but you hit the note a little bit late\nTry again";
+                lateHit = false;
+                Instantiate(Enote);
+            }
             else if (missHit == true)
             {
-                prompt.text = "You missed the note\nTry again";
+                prompt.text = "You missed the note\nTry again\nHold down 'E' and click on the light green note";
                 missHit = false;
                 Instantiate(Enote);
             }
@@ -115,9 +128,15 @@ public class TutorialController : MonoBehaviour
                 okayHit = false;
                 Instantiate(Qnote);
             }
+            else if (lateHit == true)
+            {
+                prompt.text = "So close, but you hit the note a little bit late\nTry again";
+                lateHit = false;
+                Instantiate(Qnote);
+            }
             else if (missHit == true)
             {
-                prompt.text = "You missed the note\nTry again";
+                prompt.text = "You missed the note\nTry again\nHold down 'Q' and click on the dark red note";
                 missHit = false;
                 Instantiate(Qnote);
             }
@@ -141,6 +160,12 @@ public class TutorialController : MonoBehaviour
             {
                 prompt.text = "Too early\nremember you don't need to move your mouse\nJust hit space at the right time";
                 okayHit = false;
+                Instantiate(Snote);
+            }
+            else if (lateHit == true)
+            {
+                prompt.text = "So close, but you hit the note a little bit late\nTry again";
+                lateHit = false;
                 Instantiate(Snote);
             }
             else if (missHit == true)
@@ -169,7 +194,7 @@ public class TutorialController : MonoBehaviour
         }
         else if (tutorialPos == 7)
         {
-            prompt.text = "If you hit a note early or miss one it will go down\nIf you hit a note perfectly it will increase";
+            prompt.text = "If you hit a note early/late or miss one it will go down\nIf you hit a note perfectly it will increase";
             tutorialPos++;
             Invoke("part", 7f);
         }
@@ -258,6 +283,12 @@ public class TutorialController : MonoBehaviour
     void perfect()
     {
         perfectHit = true;
+        noteClicked = true;
+    }
+
+    void late()
+    {
+        lateHit = true;
         noteClicked = true;
     }
 

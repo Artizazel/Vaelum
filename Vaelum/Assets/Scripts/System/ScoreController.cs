@@ -52,7 +52,7 @@ public class ScoreController : MonoBehaviour
 
     public AudioSource missedHitSound;
 
-    Color32 qC = new Color32(0x6A, 0x2F, 0x39, 0xFF);
+    Color32 qC = new Color32(0x76, 0x00, 0x00, 0xFF);
 
 
     void Start()
@@ -73,7 +73,7 @@ public class ScoreController : MonoBehaviour
         updateUI();
     }
 
-    void addScore(bool perfectHit)
+    void addScore(int hitType)
     {
 
         score = score + (10 * combo);
@@ -84,7 +84,7 @@ public class ScoreController : MonoBehaviour
             health = health + combo;
         }
 
-        if (perfectHit == false)
+        if (hitType != 0)
         {
             okayHitSound.Play();
 

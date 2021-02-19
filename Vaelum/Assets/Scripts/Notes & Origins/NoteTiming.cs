@@ -27,6 +27,13 @@ public class NoteTiming : MonoBehaviour
 
     }
 
+    public void lateNote()
+    {
+
+        note.SendMessage("lateNote");
+
+    }
+
     public void missedNote()
     {
 
