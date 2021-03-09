@@ -136,7 +136,7 @@ public class SongSelectMenu : MonoBehaviour
         disc.SetActive(true);
         discActive = true;
         playButton.GetComponent<Button>().interactable = true;
-        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight")
+        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight" && songNameString != "By The Books" && songNameString != "Tamb")
         {
             playButton.GetComponent<Button>().interactable = false;
         }
@@ -156,17 +156,20 @@ public class SongSelectMenu : MonoBehaviour
 
         descList.active = true;
 
+        print("Rank - " + PlayerPrefs.GetString(song + "rank"));
+        print("Percent - " + PlayerPrefs.GetString(song + "percentage"));
+
         description[0].text = "Rank - " + PlayerPrefs.GetString(song + "rank");
         description[1].text = "Percent - " + PlayerPrefs.GetString(song + "percentage");
         description[2].text = "Score - " + PlayerPrefs.GetString(song + "score");
         description[3].text = "Mode - " + PlayerPrefs.GetString(song + "songMode");
 
 
-        if(song == "Tutorial")
+        if (song == "Tutorial")
         {
             description[4].text = "♫";
         }
-        else if(song == "Snap Crackle Bop")
+        else if (song == "Snap Crackle Bop")
         {
             description[4].text = "♫♫";
         }
@@ -174,9 +177,16 @@ public class SongSelectMenu : MonoBehaviour
         {
             description[4].text = "♫♫♫";
         }
+        else if (song == "By The Books")
+        {
+            description[4].text = "♫♫♫♫";
+        }
+        else
+        {
+            description[4].text = "?";
+        }
 
-
-    }
+        }
 
 
     public void play()

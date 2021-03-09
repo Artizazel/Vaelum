@@ -11,7 +11,7 @@ public class SpawnNote : MonoBehaviour
 
     public float spawnTime;
 
-    float startUp = 1.4f;
+    float startUp = 1.45f;
 
 
     // Start is called before the first frame update

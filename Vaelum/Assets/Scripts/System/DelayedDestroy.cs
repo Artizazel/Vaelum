@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class DelayedDestroy : MonoBehaviour
 {
-
-
-    public float deathDelay = 1;
+    public float deathTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroyAfterTime", deathDelay);
+        Invoke("destroy", deathTime);
     }
 
-    
 
-    void DestroyAfterTime()
+    private void destroy()
     {
         Destroy(gameObject);
     }

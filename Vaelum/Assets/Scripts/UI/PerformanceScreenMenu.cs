@@ -87,10 +87,25 @@ public class PerformanceScreenMenu : MonoBehaviour
             ratingText.text = "Bronze";
         }
 
+        
 
-        if (int.Parse(scoreText.text) > int.Parse(PlayerPrefs.GetString(song + "score")))
+        if(PlayerPrefs.GetString(song + "score") != "")
         {
+            if ((int.Parse(scoreText.text)) > (int.Parse(PlayerPrefs.GetString(song + "score"))))
+            {
 
+                Instantiate(newHighscore, transform);
+
+                PlayerPrefs.SetFloat(song + "rating", percent);
+                PlayerPrefs.SetString(song + "percentage", percent.ToString());
+                PlayerPrefs.SetString(song + "rank", ratingText.text);
+                PlayerPrefs.SetString(song + "score", scoreText.text);
+                PlayerPrefs.SetString(song + "songMode", gamemodeText.text);
+
+            }
+        }
+        else
+        {
             Instantiate(newHighscore, transform);
 
             PlayerPrefs.SetFloat(song + "rating", percent);
@@ -98,8 +113,10 @@ public class PerformanceScreenMenu : MonoBehaviour
             PlayerPrefs.SetString(song + "rank", ratingText.text);
             PlayerPrefs.SetString(song + "score", scoreText.text);
             PlayerPrefs.SetString(song + "songMode", gamemodeText.text);
-
         }
+
+            
+        
     }
 
     // Update is called once per frame

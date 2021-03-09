@@ -30,7 +30,7 @@ public class ScoreController : MonoBehaviour
 
     public Image healthUIFill;
 
-    public GameObject noteList;
+    //public GameObject noteList;
 
     public static float noteCount = 1;
 
@@ -52,6 +52,13 @@ public class ScoreController : MonoBehaviour
 
     public AudioSource missedHitSound;
 
+    //public Image flash;
+
+
+
+
+    //private AudioSource songSource;
+
     Color32 qC = new Color32(0x76, 0x00, 0x00, 0xFF);
 
 
@@ -65,9 +72,9 @@ public class ScoreController : MonoBehaviour
 
         updatePelletHUD = GameObject.Find("Combo Bar");
 
-        noteList = GameObject.Find("Note List");
+        //noteList = GameObject.FindGameObjectWithTag("NoteList");
 
-        
+        //songSource = noteList.GetComponent<AudioSource>();
 
 
         updateUI();
@@ -88,6 +95,8 @@ public class ScoreController : MonoBehaviour
         {
             okayHitSound.Play();
 
+            
+
             print("OK");
             if(invincible == true)
             {
@@ -107,6 +116,12 @@ public class ScoreController : MonoBehaviour
         }
         else
         {
+            //PERFECT HIT
+
+            //flash.color = new Color(1,1,1,0.02f);
+
+            Invoke("resetHitMarker", 0.08f);
+            
             perfectHitSound.Play();
             numOfHitNotes++;
 
@@ -133,6 +148,11 @@ public class ScoreController : MonoBehaviour
     }
      
 
+    //void resetHitMarker()
+    //{
+    //    flash.color = new Color(1, 1, 1, 0.0f);
+    //}
+
     void missedNote()
     {
 
@@ -151,6 +171,7 @@ public class ScoreController : MonoBehaviour
         }
         else
         {
+
 
             notePercent = ((numOfHitNotes / noteCount) * 100);
 

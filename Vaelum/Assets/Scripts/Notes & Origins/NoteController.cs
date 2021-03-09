@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class NoteController : MonoBehaviour
 {
+    public Animator anim;
+
+    public GameObject ripple;
+
+    public GameObject particles;
+
+    private int noteType;
 
     private int hitType = 2;
 
@@ -89,18 +96,22 @@ public class NoteController : MonoBehaviour
         if (gameObject.tag == "Q notes")
         {
             noteColor = new Color32(0xA5, 0x00, 0x00, 0xFF);
+            noteType = 1;
         }
         else if (gameObject.tag == "W notes")
         {
             noteColor = Color.blue;
+            noteType = 2;
         }
         else if (gameObject.tag == "E notes")
         {
             noteColor = new Color32(0x39, 0xE5, 0x82, 0xFF);
+            noteType = 3;
         }
         else if (gameObject.tag == "S notes")
         {
             noteColor = Color.yellow;
+            noteType = 0;
         }
 
         realLine.SendMessage("setColour", noteColor);
@@ -136,10 +147,16 @@ public class NoteController : MonoBehaviour
             Instantiate(okayTimingText, transform.position, transform.rotation);
         }
 
+        Instantiate(particles, new Vector3(transform.position.x, transform.position.y, -3), transform.rotation);
+
+        Instantiate(ripple, transform.position, transform.rotation);
+
+        anim.SetTrigger("hit");
         scoreController.SendMessage("addScore", hitType);
         ScoreController.noteCount++;
         removeFromList();
-        Destroy(gameObject);
+        transform.tag = "Untagged";
+        Invoke("destroy", 0.1f);
 
     }
 
@@ -188,12 +205,13 @@ public class NoteController : MonoBehaviour
             tutorial.SendMessage("miss");
         }
 
-
+        anim.SetTrigger("missed");
         Instantiate(missedTimingText, transform.position, transform.rotation);
         ScoreController.noteCount++;
         scoreController.SendMessage("missedNote");
         removeFromList();
-        Destroy(gameObject);
+        transform.tag = "Untagged";
+        Invoke("destroy", 1f);
     }
 
     void removeFromList()
@@ -208,7 +226,12 @@ public class NoteController : MonoBehaviour
 
     }
 
-    
+    private void destroy()
+    {
+        Destroy(gameObject);
+    }
+
+
 
     private void FixedUpdate()
     {
