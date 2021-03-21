@@ -136,7 +136,8 @@ public class SongSelectMenu : MonoBehaviour
         disc.SetActive(true);
         discActive = true;
         playButton.GetComponent<Button>().interactable = true;
-        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight" && songNameString != "By The Books" && songNameString != "Tamb")
+        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight" && songNameString != "By The Books" 
+            && songNameString != "Tamb" && songNameString != "Tomorrow's Problem" && songNameString != "Lockhart" && songNameString != "Guido" && songNameString != "Smooth Lightning" && songNameString != "Oblivion Symphony")
         {
             playButton.GetComponent<Button>().interactable = false;
         }
@@ -169,7 +170,7 @@ public class SongSelectMenu : MonoBehaviour
         {
             description[4].text = "♫";
         }
-        else if (song == "Snap Crackle Bop")
+        else if (song == "Snap Crackle Bop" || song == "Tomorrow's Problem")
         {
             description[4].text = "♫♫";
         }

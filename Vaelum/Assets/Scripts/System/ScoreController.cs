@@ -4,10 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
+
 
 public class ScoreController : MonoBehaviour
 {
 
+    public Volume volume;
 
     public Sprite bronze;
     public Sprite silver;
@@ -65,6 +68,8 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
 
+        
+
         notePercent = 100;
         score = 0;
         numOfHitNotes = 1;
@@ -118,9 +123,9 @@ public class ScoreController : MonoBehaviour
         {
             //PERFECT HIT
 
-            //flash.color = new Color(1,1,1,0.02f);
+            volume.weight = 1f;
 
-            Invoke("resetHitMarker", 0.08f);
+            Invoke("resetHitMarker", 0.1f);
             
             perfectHitSound.Play();
             numOfHitNotes++;
@@ -146,12 +151,12 @@ public class ScoreController : MonoBehaviour
         updateUI();
 
     }
-     
 
-    //void resetHitMarker()
-    //{
-    //    flash.color = new Color(1, 1, 1, 0.0f);
-    //}
+
+    void resetHitMarker()
+    {
+        volume.weight = 0;
+    }
 
     void missedNote()
     {

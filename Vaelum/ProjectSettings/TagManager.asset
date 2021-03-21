@@ -10,6 +10,7 @@ TagManager:
   - S notes
   - Old
   - NoteList
+  - Locked
   layers:
   - Default
   - TransparentFX
