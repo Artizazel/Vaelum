@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 575522008411877370}
   m_Layer: 0
   m_Name: Q Origin
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 6498305746234274520}
   m_Layer: 0
   m_Name: E Origin (6)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 2177026745067539619}
   m_Layer: 0
   m_Name: W Origin (2)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 9073696637840921171}
   m_Layer: 0
   m_Name: Q Origin (2)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 3796678380605675192}
   m_Layer: 0
   m_Name: S Origin (11)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 8731424386546524130}
   m_Layer: 0
   m_Name: S Origin (2)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 938029070474388274}
   m_Layer: 0
   m_Name: Q Origin (11)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 4452451422784610781}
   m_Layer: 0
   m_Name: E Origin (9)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 961067548911406747}
   m_Layer: 0
   m_Name: Q Origin (6)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 2670124644953313009}
   m_Layer: 0
   m_Name: Q Origin (9)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 5325948928471975861}
   m_Layer: 0
   m_Name: W Origin (1)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 7445476729691749984}
   m_Layer: 0
   m_Name: E Origin (3)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 5754957139913382325}
   m_Layer: 0
   m_Name: S Origin (1)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 2871402800960249726}
   m_Layer: 0
   m_Name: S Origin (9)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 4199276604044062319}
   m_Layer: 0
   m_Name: E Origin (1)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 7827084547128734958}
   m_Layer: 0
   m_Name: S Origin (4)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 7792767124277791202}
   m_Layer: 0
   m_Name: S Origin (8)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 7308702050525198298}
   m_Layer: 0
   m_Name: E Origin (5)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 2422544552403464765}
   m_Layer: 0
   m_Name: W Origin (12)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 2282611396348394275}
   m_Layer: 0
   m_Name: Q Origin (3)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 8055710749967058494}
   m_Layer: 0
   m_Name: S Origin (6)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 6463117308988702619}
   m_Layer: 0
   m_Name: Q Origin (8)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1002,7 +1002,7 @@ GameObject:
   - component: {fileID: 7286332448609722021}
   m_Layer: 0
   m_Name: S Origin (5)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 2753770360441778664}
   m_Layer: 0
   m_Name: W Origin (3)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 8090811813402005752}
   m_Layer: 0
   m_Name: W Origin (10)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,7 +1137,7 @@ GameObject:
   - component: {fileID: 6547368661492579276}
   m_Layer: 0
   m_Name: E Origin (8)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 7477123065533782765}
   m_Layer: 0
   m_Name: Q Origin (5)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 8718788755537472938}
   m_Layer: 0
   m_Name: W Origin (11)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 1516333232103346693}
   m_Layer: 0
   m_Name: W Origin (9)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1317,7 +1317,7 @@ GameObject:
   - component: {fileID: 3724006722660829146}
   m_Layer: 0
   m_Name: W Origin (4)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 2006986477653078703}
   m_Layer: 0
   m_Name: W Origin (6)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 1872391322064940758}
   m_Layer: 0
   m_Name: S Origin (3)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 291440538130340342}
   m_Layer: 0
   m_Name: Q Origin (7)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1497,7 +1497,7 @@ GameObject:
   - component: {fileID: 8692596820794442916}
   m_Layer: 0
   m_Name: W Origin
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1542,7 @@ GameObject:
   - component: {fileID: 8592591855299468126}
   m_Layer: 0
   m_Name: W Origin (5)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 5859045069571516828}
   m_Layer: 0
   m_Name: W Origin (13)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1632,7 +1632,7 @@ GameObject:
   - component: {fileID: 3076831244501199514}
   m_Layer: 0
   m_Name: W Origin (7)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 8666632485794207617}
   m_Layer: 0
   m_Name: W Origin (8)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 3970018429693983830}
   m_Layer: 0
   m_Name: E Origin (2)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1767,7 +1767,7 @@ GameObject:
   - component: {fileID: 6676900080256105264}
   m_Layer: 0
   m_Name: S Origin (7)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2059,7 +2059,7 @@ GameObject:
   - component: {fileID: 1049411903614786505}
   m_Layer: 0
   m_Name: Q Origin (10)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2104,7 +2104,7 @@ GameObject:
   - component: {fileID: 5167483418606888403}
   m_Layer: 0
   m_Name: E Origin (7)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2149,7 +2149,7 @@ GameObject:
   - component: {fileID: 8922199350523283731}
   m_Layer: 0
   m_Name: S Origin
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,7 +2194,7 @@ GameObject:
   - component: {fileID: 1603949770203217341}
   m_Layer: 0
   m_Name: S Origin (12)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2239,7 +2239,7 @@ GameObject:
   - component: {fileID: 7579095812149056278}
   m_Layer: 0
   m_Name: E Origin (4)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2284,7 +2284,7 @@ GameObject:
   - component: {fileID: 3537665373056819168}
   m_Layer: 0
   m_Name: Q Origin (4)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2329,7 +2329,7 @@ GameObject:
   - component: {fileID: 852988585093647622}
   m_Layer: 0
   m_Name: S Origin (10)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2374,7 +2374,7 @@ GameObject:
   - component: {fileID: 5775321803710372755}
   m_Layer: 0
   m_Name: E Origin
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2419,7 +2419,7 @@ GameObject:
   - component: {fileID: 8291106694051030629}
   m_Layer: 0
   m_Name: S Origin (13)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2464,7 +2464,7 @@ GameObject:
   - component: {fileID: 2493208006288431199}
   m_Layer: 0
   m_Name: Q Origin (1)
-  m_TagString: Untagged
+  m_TagString: Origin
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

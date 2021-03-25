@@ -40,6 +40,10 @@ public class PerformanceScreenMenu : MonoBehaviour
     void Start()
     {
 
+        if(PlayerPrefs.GetString("mod") == "Vaelocity")
+        {
+            ScoreController.score = ScoreController.score * 1.5f;
+        }
         
 
         song = PlayerPrefs.GetString("currentSong");

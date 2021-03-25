@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ComboPelletHandler
+    - CursorHandler
     - DelayedDestroy
     - DisplayKey
     - GameOverMenu
@@ -133,11 +134,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12532}
     - Class: 114
+      Script: {instanceID: 13246}
+    - Class: 114
       Script: {instanceID: 13576}
     - Class: 114
       Script: {instanceID: 15124}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 15276}
+    - Class: 114
+      Script: {instanceID: 16924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,6 +150,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -198,7 +205,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14858}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 15276}
+    - Class: 114
+      Script: {instanceID: 16924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -206,6 +215,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -234,11 +245,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -267,17 +284,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14688}
     - Class: 114
-      Script: {instanceID: 15370}
+      Script: {instanceID: 15276}
     - Class: 114
-      Script: {instanceID: 15534}
+      Script: {instanceID: 15372}
     - Class: 114
-      Script: {instanceID: 15674}
+      Script: {instanceID: 15536}
     - Class: 114
-      Script: {instanceID: 15954}
+      Script: {instanceID: 15676}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 15956}
     - Class: 114
-      Script: {instanceID: 16990}
+      Script: {instanceID: 16924}
+    - Class: 114
+      Script: {instanceID: 16992}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -326,9 +345,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 16924}
     - Class: 114
-      Script: {instanceID: 17006}
+      Script: {instanceID: 17008}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -367,9 +386,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 15528}
+      Script: {instanceID: 15530}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 16924}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -430,9 +449,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13576}
     - Class: 114
-      Script: {instanceID: 16806}
+      Script: {instanceID: 15276}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 16808}
+    - Class: 114
+      Script: {instanceID: 16924}
+    - Class: 114
+      Script: {instanceID: 175536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -440,6 +463,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -565,37 +590,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15264}
     - Class: 114
-      Script: {instanceID: 15422}
+      Script: {instanceID: 15276}
     - Class: 114
-      Script: {instanceID: 15474}
+      Script: {instanceID: 15424}
     - Class: 114
-      Script: {instanceID: 15486}
+      Script: {instanceID: 15476}
     - Class: 114
-      Script: {instanceID: 15550}
+      Script: {instanceID: 15488}
     - Class: 114
-      Script: {instanceID: 15744}
+      Script: {instanceID: 15552}
     - Class: 114
-      Script: {instanceID: 15898}
+      Script: {instanceID: 15746}
     - Class: 114
-      Script: {instanceID: 15994}
+      Script: {instanceID: 15900}
     - Class: 114
-      Script: {instanceID: 16320}
+      Script: {instanceID: 15996}
     - Class: 114
-      Script: {instanceID: 16562}
+      Script: {instanceID: 16322}
     - Class: 114
-      Script: {instanceID: 16618}
+      Script: {instanceID: 16564}
     - Class: 114
-      Script: {instanceID: 16872}
+      Script: {instanceID: 16620}
     - Class: 114
-      Script: {instanceID: 16876}
+      Script: {instanceID: 16874}
     - Class: 114
-      Script: {instanceID: 16922}
+      Script: {instanceID: 16878}
     - Class: 114
-      Script: {instanceID: 16950}
+      Script: {instanceID: 16924}
     - Class: 114
-      Script: {instanceID: 17112}
+      Script: {instanceID: 16952}
     - Class: 114
-      Script: {instanceID: 17120}
+      Script: {instanceID: 17114}
+    - Class: 114
+      Script: {instanceID: 17122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1261,6 +1288,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 38eff81f89518fe91787c2c5df9f0e62
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CursorHandler
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

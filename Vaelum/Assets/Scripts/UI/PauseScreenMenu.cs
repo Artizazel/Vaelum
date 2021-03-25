@@ -29,7 +29,7 @@ public class PauseScreenMenu : MonoBehaviour
     public void Exit()
     {
         Time.timeScale = 1;
-
+        Cursor.visible = false;
         SceneManager.LoadScene(1);
     }
     public void Retry()

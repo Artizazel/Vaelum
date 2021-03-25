@@ -47,7 +47,7 @@ public class ScoreController : MonoBehaviour
 
     public int health = 100;
 
-    public static int score = 0;
+    public static float score = 0;
 
     public AudioSource perfectHitSound;
 
@@ -73,7 +73,7 @@ public class ScoreController : MonoBehaviour
         notePercent = 100;
         score = 0;
         numOfHitNotes = 1;
-        noteCount = 1;
+        noteCount = 2;
 
         updatePelletHUD = GameObject.Find("Combo Bar");
 

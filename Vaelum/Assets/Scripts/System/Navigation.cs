@@ -17,6 +17,8 @@ public class Navigation : MonoBehaviour
 
     public SpriteRenderer background;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,23 @@ public class Navigation : MonoBehaviour
 
         background.sprite = Resources.Load<Sprite>("Album Covers/" + SongSelectMenu.song);
 
-        
+        if(PlayerPrefs.GetString("mod") == "Vaelocity")
+        {
+            GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Vaelocity/" + SongSelectMenu.song + " VaeMod");
+
+            //song.pitch = 1.5f;
+
+            GameObject[] notes = GameObject.FindGameObjectsWithTag("Origin");
+
+            for (int i = 0; i < notes.Length; i++)
+            {
+                notes[i].SendMessage("VaelocityActive");
+            }
+
+        }
+
+
+
     }
 
     public void setSong()
@@ -83,8 +101,16 @@ public class Navigation : MonoBehaviour
         {
             paused = false;
 
+            Cursor.visible = false;
 
-            Time.timeScale = 1;
+            //if (PlayerPrefs.GetString("mod") == "Vaelocity")
+            //{
+            //    Time.timeScale = 1.5f;
+            //}
+            //else
+            //{
+            Time.timeScale = 1f;
+            //}
 
             pauseScreen.active = false;
 

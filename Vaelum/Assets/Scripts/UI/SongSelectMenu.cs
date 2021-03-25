@@ -43,6 +43,8 @@ public class SongSelectMenu : MonoBehaviour
     void Start()
     {
 
+        Time.timeScale = 1f;
+
         PlayerPrefs.SetString("mod", "Normal");
 
 
@@ -83,18 +85,18 @@ public class SongSelectMenu : MonoBehaviour
         if (rightHeld)
         {
             print(trackList.transform.childCount);
-            if(trackPosition < (trackList.transform.childCount-6) * 250)
+            if(trackPosition < 12)
             {
-                trackPosition += 20;
-                trackList.transform.Translate(-20, 0, 0);
+                trackPosition += 1;
+                trackList.transform.Translate(-1, 0, 0);
             }
         }
         if (leftHeld)
         {
             if (trackPosition > 0)
             {
-                trackPosition += -20;
-                trackList.transform.Translate(20, 0, 0);
+                trackPosition += -1;
+                trackList.transform.Translate(1, 0, 0);
             }
         }
     }
@@ -170,17 +172,21 @@ public class SongSelectMenu : MonoBehaviour
         {
             description[4].text = "♫";
         }
-        else if (song == "Snap Crackle Bop" || song == "Tomorrow's Problem")
+        else if (song == "Snap Crackle Bop" || song == "Tomorrow's Problem" || song == "Guido")
         {
             description[4].text = "♫♫";
         }
-        else if (song == "Moonlight")
+        else if (song == "Moonlight" || song == "Lockhart")
         {
             description[4].text = "♫♫♫";
         }
-        else if (song == "By The Books")
+        else if (song == "By The Books" || song == "Lockhart" || song == "Smooth Lightning")
         {
             description[4].text = "♫♫♫♫";
+        }
+        else if (song == "Oblivion Symphony")
+        {
+            description[4].text = "♫♫♫♫♫";
         }
         else
         {

@@ -68,6 +68,17 @@ public class HitDetection : MonoBehaviour
 
 
             }
+            else if (Input.GetMouseButtonDown(0) && hit.transform.tag == "A notes")
+            {
+
+                hit.transform.gameObject.SendMessage("clickedOn");
+
+
+                Debug.Log(hit.transform.gameObject);
+
+
+            }
+
 
         }
 

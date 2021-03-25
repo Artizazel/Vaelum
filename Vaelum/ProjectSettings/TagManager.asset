@@ -11,6 +11,9 @@ TagManager:
   - Old
   - NoteList
   - Locked
+  - Origin
+  - A notes
+  - A Notes
   layers:
   - Default
   - TransparentFX

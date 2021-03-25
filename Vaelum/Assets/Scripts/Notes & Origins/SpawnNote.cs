@@ -9,6 +9,8 @@ public class SpawnNote : MonoBehaviour
 
     public GameObject note;
 
+    private Object aNote;
+
     public float spawnTime;
 
     float startUp = 1.45f;
@@ -17,8 +19,16 @@ public class SpawnNote : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         StartCoroutine(countdown());
         currentAmountOfNotes = 0;
+    }
+
+    void VaelocityActive()
+    {
+        spawnTime = spawnTime / 1.5f;
+        //startUp = startUp / 1.5f;
     }
 
     IEnumerator countdown()
@@ -35,8 +45,16 @@ public class SpawnNote : MonoBehaviour
         //}
         
 
-
-        Instantiate(note, gameObject.transform.position, gameObject.transform.rotation);
+        if(PlayerPrefs.GetString("mod") == "Achromatic")
+        {
+            aNote = Resources.Load("A Note");
+            Instantiate(aNote, gameObject.transform.position, gameObject.transform.rotation);
+        }
+        else
+        {
+            Instantiate(note, gameObject.transform.position, gameObject.transform.rotation);
+        }
+        
         
     }
 

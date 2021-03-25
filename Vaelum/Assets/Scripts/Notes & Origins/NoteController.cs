@@ -75,14 +75,17 @@ public class NoteController : MonoBehaviour
 
             float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
 
-            Instantiate(line, transform.position, Quaternion.Euler(0, 0, angle), transform);
+            if (transform.tag != "A notes")
+            {
+                Instantiate(line, transform.position, Quaternion.Euler(0, 0, angle), transform);
 
-            realLine = transform.GetChild(2).gameObject;
+                realLine = transform.GetChild(2).gameObject;
 
-            Vector3 target = NoteListHandler.notes[noteNumber - 2];
 
-            realLine.SendMessage("setTarget", target);
+                Vector3 target = NoteListHandler.notes[noteNumber - 2];
 
+                realLine.SendMessage("setTarget", target);
+            }
         }
 
         //gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
@@ -112,6 +115,11 @@ public class NoteController : MonoBehaviour
         {
             noteColor = Color.yellow;
             noteType = 0;
+        }
+        else if (gameObject.tag == "A notes")
+        {
+            noteColor = Color.magenta;
+            noteType = 4;
         }
 
         realLine.SendMessage("setColour", noteColor);
