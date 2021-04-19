@@ -75,8 +75,7 @@ public class NoteController : MonoBehaviour
 
             float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg;
 
-            if (transform.tag != "A notes")
-            {
+            
                 Instantiate(line, transform.position, Quaternion.Euler(0, 0, angle), transform);
 
                 realLine = transform.GetChild(2).gameObject;
@@ -85,7 +84,7 @@ public class NoteController : MonoBehaviour
                 Vector3 target = NoteListHandler.notes[noteNumber - 2];
 
                 realLine.SendMessage("setTarget", target);
-            }
+            
         }
 
         //gameObject.transform.GetComponentInChildren<Text>().text = SpawnNote.currentAmountOfNotes.ToString();
@@ -120,6 +119,11 @@ public class NoteController : MonoBehaviour
         {
             noteColor = Color.magenta;
             noteType = 4;
+        }
+        
+        if(PlayerPrefs.GetString("mod") == "Memento")
+        {
+            noteColor = Color.white;
         }
 
         realLine.SendMessage("setColour", noteColor);
@@ -246,15 +250,24 @@ public class NoteController : MonoBehaviour
 
         if (SongSelectMenu.song != "Tutorial")
         {
-            if (glowSpawned == false && NoteListHandler.noteObjects[0] == noteIndex)
+            if (PlayerPrefs.GetString("mod") == "Memento")
             {
 
-                print("SPAWN");
+            }
+            else
+            {
 
-                Instantiate(glow, transform);
 
-                glowSpawned = true;
+                if (glowSpawned == false && NoteListHandler.noteObjects[0] == noteIndex)
+                {
 
+                    print("SPAWN");
+
+                    Instantiate(glow, transform);
+
+                    glowSpawned = true;
+
+                }
             }
         }
 

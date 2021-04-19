@@ -1,8 +1,0 @@
-This demo concerns the tracks 'Tutorial', 'Moonlight' and 'Snap Crackle Bop'.
-
-Play at least the tutorial and if possible play them all.
-
-After beating a track, please remember the rating you get. 
-If you do forget, don't worry as the rating is saved and displayed on the main menu.
-
-Good luck!

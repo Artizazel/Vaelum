@@ -16,6 +16,8 @@ public class TutorialController : MonoBehaviour
 
     int tutorialPos = 1;
 
+    public Canvas tutCanvas;
+
     bool perfectHit = false;
     bool lateHit = false;
     bool okayHit = false;
@@ -26,6 +28,7 @@ public class TutorialController : MonoBehaviour
     void Start()
     {
         part();
+        tutCanvas.worldCamera = Camera.main;
     }
 
     // Update is called once per frame

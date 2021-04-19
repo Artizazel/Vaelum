@@ -17,11 +17,18 @@ public class NoteListHandler : MonoBehaviour
 
     public static List<int> noteObjects;
 
+    private int startDelay = 2;
+
     // Start is called before the first frame update
     void Start()
     {
 
-        notes = new List<Vector3>();
+        if (PlayerPrefs.GetString("mod") == "Memento")
+        {
+            startDelay = 6;
+        }
+
+            notes = new List<Vector3>();
 
         noteObjects = new List<int>();
 
@@ -29,7 +36,7 @@ public class NoteListHandler : MonoBehaviour
 
         song = GetComponent<AudioSource>();
 
-        songLength = song.clip.length + 3;
+        songLength = song.clip.length + startDelay + 1;
 
         progressBar.maxValue = songLength;
 
@@ -39,7 +46,7 @@ public class NoteListHandler : MonoBehaviour
 
         Time.timeScale = 1;
       
-        Invoke("playSong", 2f);
+        Invoke("playSong", startDelay);
 
     }
 

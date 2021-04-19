@@ -425,6 +425,7 @@ MonoBehaviour:
   songNameText: {fileID: 704745871}
   ratingIndicator: {fileID: 362917380}
   newHighscore: {fileID: 7665833390319074310, guid: 8d264a30c3224fc438a918fa27a2963e, type: 3}
+  celebration: {fileID: 1730592207190638399, guid: af018f032c7d94f44b11f716e09ee56b, type: 3}
 --- !u!1001 &495926482
 PrefabInstance:
   m_ObjectHideFlags: 0

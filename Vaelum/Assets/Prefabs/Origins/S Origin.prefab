@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: {fileID: 464729701354726655, guid: 03c30f544f6f86444afd4a8a7a633aae, type: 3}
+  mNote: {fileID: 441366669265048118, guid: 820548c5b0687e54bad69070f227ffe9, type: 3}
+  mementoIndicator: {fileID: 4870769041861761625, guid: 443693fe100dc4848bdc3e0ddb83723b, type: 3}
   spawnTime: 5

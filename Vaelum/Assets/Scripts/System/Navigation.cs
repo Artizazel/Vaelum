@@ -23,7 +23,12 @@ public class Navigation : MonoBehaviour
     void Start()
     {
 
-        Instantiate(Resources.Load("Lists/" + SongSelectMenu.song));
+        if(PlayerPrefs.GetString("mod") != "Memento")
+        {
+            Destroy(GameObject.Find("Memento Display"));
+        }
+
+            Instantiate(Resources.Load("Lists/" + SongSelectMenu.song));
 
         setSong();
 
@@ -44,6 +49,20 @@ public class Navigation : MonoBehaviour
             for (int i = 0; i < notes.Length; i++)
             {
                 notes[i].SendMessage("VaelocityActive");
+            }
+
+        }
+        if (PlayerPrefs.GetString("mod") == "Decelerate")
+        {
+            GameObject.FindGameObjectWithTag("NoteList").GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("Decelerate/" + SongSelectMenu.song + " DecMod");
+
+            //song.pitch = 1.5f;
+
+            GameObject[] notes = GameObject.FindGameObjectsWithTag("Origin");
+
+            for (int i = 0; i < notes.Length; i++)
+            {
+                notes[i].SendMessage("DecelerateActive");
             }
 
         }

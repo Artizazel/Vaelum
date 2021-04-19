@@ -27,6 +27,7 @@ public class SongSelectMenu : MonoBehaviour
     public Sprite vaelocityDesc;
     public Sprite mementoDesc;
     public Sprite achromaticDesc;
+    public Sprite decelerateDesc;
     public Sprite descBackgroundOn;
     public GameObject descList;
     private GameObject skipButton;
@@ -138,11 +139,11 @@ public class SongSelectMenu : MonoBehaviour
         disc.SetActive(true);
         discActive = true;
         playButton.GetComponent<Button>().interactable = true;
-        if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight" && songNameString != "By The Books" 
-            && songNameString != "Tamb" && songNameString != "Tomorrow's Problem" && songNameString != "Lockhart" && songNameString != "Guido" && songNameString != "Smooth Lightning" && songNameString != "Oblivion Symphony")
-        {
-            playButton.GetComponent<Button>().interactable = false;
-        }
+        //if (songNameString != "Tutorial" && songNameString != "Snap Crackle Bop" && songNameString != "Moonlight" && songNameString != "By The Books" 
+        //    && songNameString != "Tamb" && songNameString != "Tomorrow's Problem" && songNameString != "Lockhart" && songNameString != "Guido" && songNameString != "Smooth Lightning" && songNameString != "Oblivion Symphony" && songNameString != "Arpellow")
+        //{
+        //    playButton.GetComponent<Button>().interactable = false;
+        //}
         discImage.sprite = discRating[rating];
         source.clip = Resources.Load<AudioClip>("Songs/" + songNameString);
         source.time = Random.Range(5, 60);
@@ -176,7 +177,7 @@ public class SongSelectMenu : MonoBehaviour
         {
             description[4].text = "♫♫";
         }
-        else if (song == "Moonlight" || song == "Lockhart")
+        else if (song == "Moonlight" || song == "Arpellow" || song == "Brief Chronicle")
         {
             description[4].text = "♫♫♫";
         }
@@ -213,22 +214,29 @@ public class SongSelectMenu : MonoBehaviour
 
     public void vaelocitySelected()
     {
-        nob.transform.rotation = Quaternion.Euler(0, 0, -124.793f);
+        nob.transform.rotation = Quaternion.Euler(0, 0, 260);
         modifierDesc.sprite = vaelocityDesc;
         PlayerPrefs.SetString("mod", "Vaelocity");
     }
     public void mementoSelected()
     {
-        nob.transform.rotation = Quaternion.Euler(0, 0, -180);
+        nob.transform.rotation = Quaternion.Euler(0, 0, 220);
         modifierDesc.sprite = mementoDesc;
         PlayerPrefs.SetString("mod", "Memento");
     }
     public void achromaticSelected()
     {
-        nob.transform.rotation = Quaternion.Euler(0, 0, -233.526f);
+        nob.transform.rotation = Quaternion.Euler(0, 0, 140);
         modifierDesc.sprite = achromaticDesc;
         PlayerPrefs.SetString("mod", "Achromatic");
     }
+    public void decelerateSelected()
+    {
+        nob.transform.rotation = Quaternion.Euler(0, 0, 100);
+        modifierDesc.sprite = decelerateDesc;
+        PlayerPrefs.SetString("mod", "Decelerate");
+    }
+
     public void normalSelected()
     {
         nob.transform.rotation = Quaternion.Euler(0, 0, 0);

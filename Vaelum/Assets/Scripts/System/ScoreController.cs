@@ -19,6 +19,8 @@ public class ScoreController : MonoBehaviour
     public Sprite diamond;
     public Sprite vae;
 
+    bool maxComboReached = false;
+
     private GameObject updatePelletHUD;
 
     public Image ratingIndicator;
@@ -54,6 +56,8 @@ public class ScoreController : MonoBehaviour
     public AudioSource okayHitSound;
 
     public AudioSource missedHitSound;
+
+    public GameObject visualiser;
 
     //public Image flash;
 
@@ -117,6 +121,7 @@ public class ScoreController : MonoBehaviour
             }
 
             combo = 1;
+            maxComboReached = false;
 
         }
         else
@@ -124,6 +129,8 @@ public class ScoreController : MonoBehaviour
             //PERFECT HIT
 
             volume.weight = 1f;
+
+            visualiser.SendMessage("hitNote");
 
             Invoke("resetHitMarker", 0.1f);
             
@@ -137,16 +144,19 @@ public class ScoreController : MonoBehaviour
                 combo++;
             }
             
+
         }
 
-
-        if(combo == 11)
+        if (combo == 11 && maxComboReached == false)
         {
 
             invincible = true;
             healthUIFill.color = Color.white;
+            visualiser.SendMessage("fullCombo");
+            maxComboReached = true;
 
         }
+
 
         updateUI();
 
@@ -163,7 +173,7 @@ public class ScoreController : MonoBehaviour
 
 
         missedHitSound.Play();
-
+        maxComboReached = false;
         combo = 1;
         if (invincible == true)
         {

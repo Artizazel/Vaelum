@@ -16,6 +16,7 @@ public class PerformanceScreenMenu : MonoBehaviour
     public Text songNameText;
     public Image ratingIndicator;
     public GameObject newHighscore;
+    public GameObject celebration;
     string song;
     float percent;
 
@@ -44,7 +45,15 @@ public class PerformanceScreenMenu : MonoBehaviour
         {
             ScoreController.score = ScoreController.score * 1.5f;
         }
-        
+        if (PlayerPrefs.GetString("mod") == "Achromatic")
+        {
+            ScoreController.score = ScoreController.score * 0.7f;
+        }
+        if (PlayerPrefs.GetString("mod") == "Decelerate")
+        {
+            ScoreController.score = ScoreController.score * 0.8f;
+        }
+
 
         song = PlayerPrefs.GetString("currentSong");
 
@@ -99,6 +108,7 @@ public class PerformanceScreenMenu : MonoBehaviour
             {
 
                 Instantiate(newHighscore, transform);
+                Instantiate(celebration);
 
                 PlayerPrefs.SetFloat(song + "rating", percent);
                 PlayerPrefs.SetString(song + "percentage", percent.ToString());
@@ -111,6 +121,7 @@ public class PerformanceScreenMenu : MonoBehaviour
         else
         {
             Instantiate(newHighscore, transform);
+            Instantiate(celebration);
 
             PlayerPrefs.SetFloat(song + "rating", percent);
             PlayerPrefs.SetString(song + "percentage", percent.ToString());
