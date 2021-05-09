@@ -43,16 +43,11 @@ public class HitDetection : MonoBehaviour
 
                 hit.transform.gameObject.SendMessage("clickedOn");
 
-
-
-
             }
             else if (Input.GetKey("q") && Input.GetMouseButtonDown(0) && hit.transform.tag == "Q notes" & !(Input.GetKey("w") || Input.GetKey("e")))
             {
 
                 hit.transform.gameObject.SendMessage("clickedOn");
-
-
 
             }
             else if (Input.GetKey("e") && Input.GetMouseButtonDown(0) && hit.transform.tag == "E notes" & !(Input.GetKey("w") || Input.GetKey("q")))
@@ -60,15 +55,10 @@ public class HitDetection : MonoBehaviour
 
                 hit.transform.gameObject.SendMessage("clickedOn");
 
-
             }
             else if (Input.GetMouseButtonDown(0) && hit.transform.tag == "A notes")
             {
-
                 hit.transform.gameObject.SendMessage("clickedOn");
-
-
-
             }
 
 

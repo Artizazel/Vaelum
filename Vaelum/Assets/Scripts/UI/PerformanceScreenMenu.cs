@@ -37,6 +37,11 @@ public class PerformanceScreenMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void reset()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +50,13 @@ public class PerformanceScreenMenu : MonoBehaviour
         {
             ScoreController.score = ScoreController.score * 1.5f;
         }
+        if (PlayerPrefs.GetString("mod") == "Memento")
+        {
+            ScoreController.score = ScoreController.score * 1.5f;
+        }
         if (PlayerPrefs.GetString("mod") == "Achromatic")
         {
-            ScoreController.score = ScoreController.score * 0.7f;
+            ScoreController.score = ScoreController.score * 0.4f;
         }
         if (PlayerPrefs.GetString("mod") == "Decelerate")
         {

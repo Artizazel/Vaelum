@@ -77,7 +77,7 @@ public class SpawnNote : MonoBehaviour
 
     void DecelerateActive()
     {
-        spawnTime = spawnTime / 0.9f;
+        spawnTime = spawnTime / 0.8f;
         //startUp = startUp / 1.5f;
     }
 
